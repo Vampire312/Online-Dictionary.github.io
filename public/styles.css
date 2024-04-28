@@ -1,0 +1,584 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    min-height: 650px;
+
+}
+
+.titel {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.articles-container {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding-bottom: 30px; 
+    position: relative; 
+}
+
+.article {
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.dark-mode .article {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.841);
+}
+
+.article img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 20px 20px;
+}
+
+.article-content {
+    padding: 20px;
+}
+
+.article h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #000000;
+    text-align: center;
+}
+
+.article p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.dark-mode .article p {
+    color: #ffffff;
+}
+
+.nav-buttons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.prev-button {
+    float: left;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.next-button {
+    float: right;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.nav-buttons button {
+    width: 50%;
+    padding: 10px;
+    background-color: transparent;
+    color: #000000;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    font-size: 25px;
+    background-color: #b0b0b0;
+}
+
+.dark-mode .nav-buttons button{
+    background-color: transparent;
+}
+
+.dark-mode .nav-buttons button:hover {
+    background-color: #252525;
+}
+
+.word-of-the-day-container,
+.dictionary-app-container {
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.word-of-the-day-container {
+    margin-right: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.search-container {
+    width: 130%;
+}
+
+input[type="text"] {
+    font-size: 25px;
+    width: 60%;
+    height: 20px;
+    padding: 20px 0px 20px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+#clearSearchInput {
+    padding: 5px;
+    background-color: transparent;
+    color:#000000;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#clearSearchInput:hover{
+    background-color: transparent;
+    color: red;
+    font-size: 30px;
+    padding-left: 0px;
+    padding-right: 1.8px;
+}
+
+#Searchbutton {
+    padding: 2px;
+}
+
+#Searchbutton:hover {
+    background-color:#007bff;
+}
+
+button {
+    padding: 10px 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#clearButton:hover {
+    background-color: transparent;
+    font-size: 40px;
+    padding-top: 0px;
+}
+
+#suggestions {
+    margin-bottom: 10px;
+    text-align: left;
+    position: absolute;
+    width: 25%;
+    max-height: 330px;
+    overflow-y: auto;
+}
+
+#suggestions .suggestion {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+#suggestions .suggestion:hover {
+    background-color: #e0e0e0;
+}
+
+#result {
+    border: 10px solid #f3f3f3;
+    padding: 0px;
+    text-align: left;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+.info-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.infobox {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+#wordOfTheDayText{
+    font-size: 30px;
+    text-align: center;
+    padding: 0px;
+    margin: 0%;
+}
+
+#wod {
+    text-align: center;
+    font-weight: bold;
+}
+
+.info-box h2 {
+    margin-top: 0;
+}
+
+#wordOfTheDay {
+    height: 250px;
+    overflow-y: auto;
+}
+
+.last-searched-item {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+#lastSearched {
+    position: relative;
+    margin-top: 5px;
+}
+
+.last-searched-item {
+    position: relative; /* Set position to relative for proper positioning of the cross icon */
+}
+
+.clear-item {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the value as needed to position the icon */
+    transform: translateY(-50%);
+    color: #000000; /* Change the color as needed */
+}
+
+.clear-item:hover {
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 0px 3px ;
+    color: red;
+}
+
+.highlighted {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#clearButton {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    margin-top: 2px;
+    margin-right: 5%;
+}
+
+.last-searched-item:hover {
+    background-color: #e0e0e0;
+}
+
+#lastSearchedList {
+    height: 170px;
+    overflow-y: auto; 
+    list-style-type: none;
+    padding-left: 0%;
+}
+
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    margin-right: 50px;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+#darkModeToggle:hover {
+    background-color: transparent;
+    padding: 0px;
+    font-size: 50px;
+    top: 15px;
+    right: 15px;
+}
+
+.dark-mode #clearSearchInput:hover{
+    background-color: transparent;
+    color: red;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode #clearSearchInput{
+    color: #fff;
+}
+
+.dark-mode #clearButton:hover {
+    background-color: transparent;
+}
+
+.dark-mode .last-searched-item:hover {
+    background-color: #252525;
+}
+
+.dark-mode #suggestions .suggestion:hover {
+    background-color: #252525;
+}
+
+.dark-mode #suggestions .suggestion {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #3d3d3d;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.dark-mode .word-of-the-day-container,
+.dark-mode .dictionary-app-container {
+    background-color: #444; /* Adjust background color for containers */
+}
+
+.dark-mode .info-box{
+    background-color: #444; /* Adjust background color for containers */
+}
+
+.dark-mode .infobox{
+    background-color: #444; /* Adjust background color for containers */
+}
+
+.dark-mode .last-searched-item{
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #3d3d3d;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.dark-mode .dictionary-app-container #result{
+    background-color: #444;
+    border: 10px solid #444;
+}
+
+.dark-mode h1, .dark-mode h2 {
+    background-color: transparent;
+    color: #fff; /* Adjust heading colors */
+}
+
+.dark-mode input[type="text"] {
+    background-color: #555; /* Adjust input background color */
+    color: #fff; /* Adjust input text color */
+}
+
+.dark-mode button {
+    background-color: #444;
+    color: #fff;
+}
+
+.feedback-message {
+    position: fixed;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .feedback-message{
+    background-color: #252525;
+    color: #fff;
+}
+
+#loading {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #007bff;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 1080px){
+    /* Set initial styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+#suggestions {
+    margin-bottom: 10px;
+    text-align: left;
+    position: absolute;
+    width: 25%;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.word-of-the-day-container,
+.dictionary-app-container {
+    min-height: 400px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.titel {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.articles-container {
+    width: 90%; /* Adjust container width for smaller screens */
+    margin: 0 auto;
+    padding-bottom: 30px; 
+    position: relative; 
+}
+
+.article {
+    margin-bottom: 30px; /* Reduce margin for smaller screens */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.article img {
+    width: 100%; /* Adjust image width to fill container */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Adjust margin for smaller screens */
+    border-radius: 20px;
+}
+
+.article-content {
+    padding: 20px;
+}
+
+.article h2 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.article p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    line-height: 1.6;
+}
+
+.nav-buttons {
+    position: relative; /* Remove absolute positioning */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Separate buttons */
+    margin-top: 20px; /* Adjust margin for smaller screens */
+}
+
+.prev-button,
+.next-button {
+    width: 45%; /* Adjust button width for smaller screens */
+    padding: 10px;
+    background-color: transparent;
+    color: #000000;
+    font-size: 16px; /* Adjust font size for smaller screens */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #b0b0b0;
+}
+
+.clear-item {
+    position: absolute;
+    color: #000000;
+    font-size: 18px;
+}
+
+.clear-item:hover {
+    color: red;
+}
+
+/* Add media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .articles-container {
+        width: 95%; /* Adjust container width for smaller screens */
+    }
+}
+
+/* Add dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .article {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .article h2 {
+    color: #fff;
+}
+
+.dark-mode .article p {
+    color: #fff;
+}
+
+.dark-mode .prev-button,
+.dark-mode .next-button {
+    color: #fff;
+}
+
+.dark-mode .clear-item:hover {
+    color: red;
+}
+
+}
