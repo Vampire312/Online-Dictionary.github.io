@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
+      <div class="word-of-the-day-container">
+        <h2 id="wod">Word of the Day</h2>
+        <div id="wordOfTheDay" class="infobox">
+          <p id="wordOfTheDayText"></p>
+          <p id="wordOfTheDayDefinition"></p>
+        </div> 
+        <div id="lastSearched" class="info-box">
+          <div class="lastSearch">
+              <h2>Last Searched Words</h2>
+              <button id="clearButton" onclick="clearLastSearched()">🗑️</button>
+          </div>
+          <ul id="lastSearchedList" class="last-searched-list"></ul>
+        </div>
+      </div>
+      <div class="dictionary-app-container">
+        <h1>Dictionary</h1>
+        <div class="search-container">
+          <span><input type="text" id="searchInput" placeholder="Enter a word..."/>
+            <button id="clearSearchInput" onclick="clearSearchInput()">✕</button>
+            <button id="Searchbutton" onclick="search()">🔍</button>
+        </span>
+          <div id="suggestions"></div>
+        </div>
+        <br />
+        <div id="imagesContainer"></div>
+        <div id="result" class="result-section"></div>
+      </div>
+    </div>
+    <div id="loading" class="loading"></div>
+    <div class="titel">Article</div>
+    <div class="articles-container"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
